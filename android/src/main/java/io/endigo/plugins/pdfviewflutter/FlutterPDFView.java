@@ -21,7 +21,7 @@ public class FlutterPDFView implements PlatformView, MethodCallHandler {
     private final MethodChannel methodChannel;
 
     @SuppressWarnings("unchecked")
-    FlutterPDFView(Context context, BinaryMessenger messenger, int id, Map<String, Object> params) {
+    public FlutterPDFView(Context context, BinaryMessenger messenger, int id, Map<String, Object> params) {
         pdfView = new PDFView(context, null);
 
         methodChannel = new MethodChannel(messenger, "plugins.endigo.io/pdfview_" + id);
